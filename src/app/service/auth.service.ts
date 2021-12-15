@@ -33,6 +33,10 @@ export class AuthService {
     return this.http.post<Usuario>('http://localhost:8080/usuarios/cadastrar', usuario)
   }
 
+  getByIdUser(id: number):Observable<Usuario>{
+    return this.http.get<Usuario>('http://localhost:8080/usuarios/${id}',this.token)
+  }
+
   logado(){
     let ok: boolean = false
 
@@ -42,4 +46,6 @@ export class AuthService {
 
     return ok
   }
+
+  
 }
