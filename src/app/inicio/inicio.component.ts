@@ -5,6 +5,8 @@ import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { Usuario } from '../model/Usuario';
 import { AuthService } from '../service/auth.service';
+import { CategoriaService } from '../service/categoria.service';
+import { ProdutoService } from '../service/produto.service';
 
 @Component({
   selector: 'app-inicio',
@@ -25,17 +27,14 @@ export class InicioComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private authService: AuthService
-    /*
+    private authService: AuthService,
     private categoriaService: CategoriaService,
     private produtoService: ProdutoService
-    */
+    
   ) { }
 
   ngOnInit(){
-    if(environment.token == ""){
-      this.router.navigate(["/entrar"])
-    }
+   
 
     this.authService.refreshToken()
 
