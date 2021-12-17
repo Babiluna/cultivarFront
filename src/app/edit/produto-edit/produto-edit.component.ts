@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Categoria } from 'src/app/model/Categoria';
 import { Produto } from 'src/app/model/Produto';
+import { Usuario } from 'src/app/model/Usuario';
+import { AuthService } from 'src/app/service/auth.service';
+import { CategoriaService } from 'src/app/service/categoria.service';
 import { ProdutoService } from 'src/app/service/produto.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -12,22 +16,34 @@ import { environment } from 'src/environments/environment.prod';
 export class ProdutoEditComponent implements OnInit {
   
   produto: Produto = new Produto()
+
+  categoria: Categoria = new Categoria()
+  listaCategorias: Categoria[]
+  idCategoria: number
   
+  usuario: Usuario = new Usuario()
+  idUsuario = environment.id
 
   constructor(
     private produtoService: ProdutoService,
+    private categoriaService: CategoriaService,
+    private authService: AuthService,
     private router: Router,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit(){
 
-    if(environment.token == ""){
-      this.router.navigate(["/entrar"])
-    }
+    this.authService.refreshToken()
 
     let id = this.route.snapshot.params["id"]
     this.findByIdProduto(id)
+  }
+
+  findByIdCategoria(){
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria)=>{
+      this.categoria = resp
+    })
   }
 
   findByIdProduto(id: number){
