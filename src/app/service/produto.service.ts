@@ -17,6 +17,12 @@ export class ProdutoService {
     headers: new HttpHeaders().set("Authorization", environment.token)
   }
 
+  refreshToken(){
+    this.token = {
+      headers: new HttpHeaders().set('Authorization', environment.token)
+    }
+  }
+
   getAllProduto(): Observable<Produto[]>{
     return this.http.get<Produto[]>("http://localhost:8080/produtos")
   }
