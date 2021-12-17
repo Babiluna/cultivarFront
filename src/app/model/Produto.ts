@@ -10,4 +10,5 @@ export class Produto{
   public pesoUnitario: number
   public categoriaDoProduto: Categoria
   public criador: Usuario
+  public fotoProduto: string
 }
