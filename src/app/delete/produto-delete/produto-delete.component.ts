@@ -1,8 +1,8 @@
-import { environment } from './../../../environments/environment.prod';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Produto } from 'src/app/model/Produto';
 import { ProdutoService } from 'src/app/service/produto.service';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-produto-delete',
@@ -11,12 +11,12 @@ import { ProdutoService } from 'src/app/service/produto.service';
 })
 export class ProdutoDeleteComponent implements OnInit {
 
-  postagem: Produto = new Produto()
+  produto: Produto = new Produto()
   idPost: number
-  produto: Produto;
 
   constructor(
     private router: Router,
+    private authService: AuthService,
     private route: ActivatedRoute,
     private produtoService: ProdutoService,
   ) { }
@@ -25,9 +25,7 @@ export class ProdutoDeleteComponent implements OnInit {
 
     window.scroll(0,0)
 
-    if(environment.token == ''){
-      this.router.navigate(['/entrar'])
-    }
+    this.authService.refreshToken()
 
     this.idPost = this.route.snapshot.params['id']
     this.findByIdProduto(this.idPost)
@@ -38,7 +36,7 @@ export class ProdutoDeleteComponent implements OnInit {
       this.produto = resp
     })
   }
- apagar(){
+  apagar(){
     this.produtoService.deleteProduto(this.idPost).subscribe(()=>{
       alert('Produto deletado com sucesso!')
       this.router.navigate(['/inicio'])
@@ -46,4 +44,5 @@ export class ProdutoDeleteComponent implements OnInit {
   }
 
 }
+
 
