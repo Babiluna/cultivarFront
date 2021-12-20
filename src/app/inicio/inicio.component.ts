@@ -34,8 +34,7 @@ export class InicioComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-   
-
+  
     this.authService.refreshToken()
 
   }

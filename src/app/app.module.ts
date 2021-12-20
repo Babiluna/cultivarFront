@@ -18,6 +18,7 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { ProdutoComponent } from './produto/produto.component';
+import { SobrenosComponent } from './sobrenos/sobrenos.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { ProdutoComponent } from './produto/produto.component';
     ProdutoDeleteComponent,
     UserEditComponent,
     CategoriaComponent,
-    ProdutoComponent
+    ProdutoComponent,
+    SobrenosComponent
   ],
   imports: [
     BrowserModule,

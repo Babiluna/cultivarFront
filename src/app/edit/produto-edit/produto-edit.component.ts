@@ -35,7 +35,7 @@ export class ProdutoEditComponent implements OnInit {
   ngOnInit(){
 
     this.authService.refreshToken()
-
+    this.findAllCategorias()
     let id = this.route.snapshot.params["id"]
     this.findByIdProduto(id)
   }
@@ -43,6 +43,12 @@ export class ProdutoEditComponent implements OnInit {
   findByIdCategoria(){
     this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria)=>{
       this.categoria = resp
+    })
+  }
+
+  findAllCategorias(){
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[])=>{
+      this.listaCategorias = resp
     })
   }
 
