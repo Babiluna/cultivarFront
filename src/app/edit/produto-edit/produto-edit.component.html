@@ -1,42 +1,60 @@
+<div class="editarproduto">
 
-<div class="container mt-5 mb-5">
+  <div class="title">
+    <h1 class="text-center text-secondary">Atualizar produto</h1>
+  </div>
 
-    <div class="row">
-      <div class="col-md-12">
-        <h1 class="text-center text-secondary">Atualizar Produto</h1>
+
+  <div class="editar">
+    <div class="editar-prod">
+      <div>
+        <div class="form-group">
+          <label for="nome">Nome do produto:</label>
+          <input [(ngModel)]="produto.produto" type="text" class="form-field" id="produto" name='produto'
+            placeholder="Digite o produto">
+        </div>
+        <div class="form-group">
+          <label for="foto">Foto:</label>
+          <input [(ngModel)]="produto.fotoProduto" type="text" class="form-field" id="fotoProduto" name='fotoProduto'
+            placeholder="Coloque um link da foto do produto">
+        </div>
+        <div class="form-group">
+          <label for="peso">Peso:</label>
+          <input [(ngModel)]="produto.pesoUnitario" type="number" class="form-field" id="pesoUnitario"
+            name='pesoUnitario' placeholder="Digite o peso">
+        </div>
       </div>
-    </div>
-  
-    <div class="row d-flex justify-content-center">
-      <div class="col-md-6">
-  
+
+      <div>
         <div class="form-group">
-          <input [(ngModel)]="produto.produto" type="text" class="form-control" id="produto" name='produto' placeholder="Digite o produto">
+          <label for="valor">Valor:</label>
+          <input [(ngModel)]="produto.valor" type="number" class="form-field" id="valor" name='valor'
+            placeholder="Digite o valor">
         </div>
         <div class="form-group">
-          <input [(ngModel)]="produto.fotoProduto" type="text" class="form-control" id="fotoProduto"  name='fotoProduto' placeholder="Coloque um link da foto do produto">
+          <label for="estoque">Estoque:</label>
+          <input [(ngModel)]="produto.estoque" type="number" class="form-field" id="estoque" name='estoque'
+            placeholder="Digite a quantidade disponivel">
         </div>
+
         <div class="form-group">
-          <input [(ngModel)]="produto.pesoUnitario" type="number" class="form-control" id="pesoUnitario" name='pesoUnitario' placeholder="Digite o peso">
-        </div>
-        <div class="form-group">
-          <input [(ngModel)]="produto.valor" type="number" class="form-control" id="valor" name='valor' placeholder="Digite o valor">
-        </div>
-        <div class="form-group">
-          <input [(ngModel)]="produto.estoque" type="number" class="form-control" id="estoque" name='estoque' placeholder="Digite a quantidade disponivel">
-        </div>
-        <div class="form-group">
-          <select name="categorias" id="categorias" class='form-control' [(ngModel)]='idCategoria' (change)='findByIdCategoria()'>
+          <label for="categoria">Categoria:</label>
+          <select class="form-field" name="categorias" id="categorias" [(ngModel)]='idCategoria'
+            (change)='findByIdCategoria()'>
+            <option>Selecione uma categoria:</option>
             <option *ngFor='let cat of listaCategorias' value="{{cat.id}}">{{cat.categoria}}</option>
           </select>
         </div>
-  
-        <div class="d-flex justify-content-center">
-          <button class="btn btn-danger mr-4" routerLink="/produto">Cancelar</button>
-          <button class="btn btn-success" (click)="atualizar()">Atualizar</button>
-        </div>
-  
       </div>
     </div>
-  
+
+    <div class="buttons">
+      <button routerLink="/produto">Cancelar</button>
+      <button (click)="atualizar()">Atualizar</button>
+    </div>
   </div>
+
+
+</div>
+
+<app-rodape></app-rodape>

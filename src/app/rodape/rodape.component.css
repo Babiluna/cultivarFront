@@ -1,23 +1,58 @@
-ul.social-network{
-    list-style: none;
-    padding: 0;
-  }
-  
-  ul.social-network li{
-    display: inline;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
+
+* {
     margin: 0;
-    padding: 5px;
-  }
-  
-  .fa{
-    font-size: 35pt;
-    color: black;
-    padding: 10px;
-  }
-  .fa:hover{
-    transform: scale(1.2);
-    transition-duration: 0.5s;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: #606C38;
+    padding: 20px 0;
+}
+
+.footer-logo {
+  display: flex;
+  align-items:baseline;
+}
+
+.footer-logo a img {
+  width: 80px;
+}
+
+.footer-logo h1 {
+    letter-spacing: 2px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    color: #FEFAE0;
+    padding: 2px 20px;
+}
+
+.footer-logo p {
+    letter-spacing: 2px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    color: #FEFAE0;
+    padding: 5px 20px;
+}
+
+.social-network ul li {
+    list-style: none;
+}
+
+.fa {
+    font-size: 45pt;
+    color: #FEFAE0;
+}
+
+.fa:hover {
+    transform: scale(0.9);
+    color: #283618;
+    transition-duration: 0.3s;
     transition-timing-function: ease-in;
     transition-property: all;
-    color: #343A40;
-  }
+}

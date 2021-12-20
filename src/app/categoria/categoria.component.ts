@@ -21,6 +21,7 @@ export class CategoriaComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.categoriaService.refreshToken()
     this.findAllCategorias()
   }
 

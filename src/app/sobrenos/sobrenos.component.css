@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Playball&family=Raleway:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
+
+.title {
+    margin-top: 70px;
+    padding: 45px;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    color: #283618;
+    text-align: center;
+}
+
+.title h1 {
+    font-weight: 800;
+    font-size: 65px;
+    letter-spacing: 7px;
+}
+
+.title p {
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+hr {
+    margin: 0 80px;
+
+}
+
+.what {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 300px;
+    width: 100%;
+}
+
+.what h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    color: #283618;
+}
+
+.what p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    color: #283618;
+    letter-spacing: 1px;
+}
+
+.what-text {
+    width: 58%;
+}
+
+.what-img img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.who {
+    background-image: url(https://i.imgur.com/Dq7Y0Lq.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 300px;
+    width: 100%;
+}
+.who-title {
+    width: 50%;
+}
+
+.who-title h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 70px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    color: #283618;
+}
+
+.who-text {
+    width: 50%;
+}
+
+.who-text {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    color: #283618;
+    letter-spacing: 1px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+}
+
+.team-title {
+    margin-top: 60px;
+    width: 100%;
+    font-weight: 800;
+    font-size: 45px;
+    letter-spacing: 7px;
+    font-family: 'Raleway', sans-serif;
+    color: #283618;
+    text-align: center;
+}
+
+.us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    margin: 50px 0;
+}
+
+.us-img {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.us-img a img {
+    width: 180px;
+    border-radius: 100%;
+    background-color: #BC6C25;
+}
+
+.us-img p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #283618;
+    letter-spacing: 5px;
+    margin-top: 20px;
+}
+
+.us-links ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.us-links ul li {
+    list-style: none;
+}
+
+.fa {
+    font-size: 45pt;
+    color: #283618;
+    margin: 0 25px;
+}
+
+.fa:hover {
+    transform: scale(0.9);
+    color: #606C38;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-property: all;
+}

@@ -11,6 +11,7 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ProdutoComponent } from './produto/produto.component';
+import { SobrenosComponent } from './sobrenos/sobrenos.component';
 
 const routes: Routes = [
 
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: "inicio", component: InicioComponent},
   {path: "categoria", component: CategoriaComponent},
   {path: "produto", component: ProdutoComponent},
+  {path: "sobrenos", component: SobrenosComponent},
 
   {path: "categoria-edit/:id", component: CategoriaEditComponent},
   {path: "categoria-delete/:id", component: CategoriaDeleteComponent},
