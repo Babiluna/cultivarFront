@@ -17,27 +17,33 @@ export class ProdutoService {
     headers: new HttpHeaders().set("Authorization", environment.token)
   }
 
+  refreshToken(){
+    this.token = {
+      headers: new HttpHeaders().set('Authorization', environment.token)
+    }
+  }
+
   getAllProduto(): Observable<Produto[]>{
-    return this.http.get<Produto[]>("http://localhost:8080/produtos")
+    return this.http.get<Produto[]>("https://cultivar.herokuapp.com/produtos")
   }
 
   getByIdProduto(id: number): Observable<Produto>{
-    return this.http.get<Produto>(`http://localhost:8080/produtos/by-id/${id}`)
+    return this.http.get<Produto>(`https://cultivar.herokuapp.com/produtos/by-id/${id}`)
   }
 
   getByProduto(produto: string): Observable<Produto>{
-    return this.http.get<Produto>(`http://localhost:8080/produtos/by-produto/${produto}`)
+    return this.http.get<Produto>(`https://cultivar.herokuapp.com/produtos/by-produto/${produto}`)
   }
 
   postProduto(produto: Produto): Observable<Produto>{
-    return this.http.post<Produto>("http://localhost:8080/produtos", produto, this.token)
+    return this.http.post<Produto>("https://cultivar.herokuapp.com/produtos", produto, this.token)
   }
 
   putProduto(produto: Produto): Observable<Produto>{
-    return this.http.put<Produto>("http://localhost:8080/produtos", produto, this.token)
+    return this.http.put<Produto>("https://cultivar.herokuapp.com/produtos", produto, this.token)
   }
 
   deleteProduto(id: number){
-    return this.http.delete(`http://localhost:8080/produtos/${id}`, this.token)
+    return this.http.delete(`https://cultivar.herokuapp.com/produtos/${id}`, this.token)
   }
 }

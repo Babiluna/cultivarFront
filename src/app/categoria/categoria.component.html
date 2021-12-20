@@ -1,0 +1,55 @@
+<div class="container-fluid">
+
+    <div class="title">
+        <div class="title-text">
+            <h1>CATEGORIAS</h1>
+            <h5>Veja aqui todas as categorias cadastradas ou cadastre uma nova:</h5>
+        </div>
+
+        <div class="cadastrar-cat">
+            <div>
+                <label for="usuario">Nome da categoria:</label>
+                <input [(ngModel)]="categoria.categoria" type="text" class="form-control" id="categoria"
+                    placeholder="Digite a categoria">
+            </div>
+
+            <div>
+                <button class="btn btn-light" (click)="cadastrar()">Cadastrar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="allcat">
+
+        <div>
+            <h2>Todas as Categorias</h2>
+        </div>
+
+        <div class="allcat-list">
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Categoria</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let item of listaCategorias">
+                        <th>{{item.id}}</th>
+                        <td>{{item.categoria}}</td>
+                        <td class="d-flex justify-content-end">
+                            <button [routerLink]="['/categoria-edit', item.id]">Editar</button>
+                            <button [routerLink]="['/categoria-delete', item.id]">Apagar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    
+</div>
+
+<app-rodape></app-rodape>
