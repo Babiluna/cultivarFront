@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Playball&family=Raleway:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
+
+.carousel {
+    margin-top: 70px;
+}
+
+.aboutus {
+    background-color: #FEFAE0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 200px;
+    width: 100%;
+}
+
+.aboutus-text {
+    width: 58%;
+}
+
+.aboutus-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.aboutus h1 {
+    font-family: 'Playball', cursive;
+    color: #283618;
+    margin: 20px 0;
+}
+
+.aboutus p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #283618;
+    letter-spacing: 3px;
+}
+
+.aboutus img {
+    width: 250px;
+    margin: 20px;
+}
+
+.aboutus button {
+    color: #FEFAE0;
+    font-weight: 800;
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+    background-color: #283618;
+    width: 250px;
+    padding: 5px;
+    margin: 10px;
+    border: none;
+    border-radius: 80px;
+}
+
+.aboutus button:hover {
+    background: #606C38;
+    transform: scale(0.96);
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-property: all;
+}
+
+h2 {
+    text-align: center;
+    margin: 50px 0;
+    color: #283618;
+    font-weight: 800;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 3px;
+}

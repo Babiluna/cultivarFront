@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="container-md">
+        <div class="row d-flex justify-content-between p-0 m-0 p-sm-0 m-sm-0">
+            <div class="produto-card my-3" *ngFor="let produto of listaProdutos">
+                <div class="card">
+                    <a routerLink="/produto-detalhe">
+                        <img  width="200px" height="200px"  [src]="produto.fotoProduto" alt="Card image cap" class="imagem-card" />
+                    </a>
+                    <hr>
+                    <div class="card-body p-0">
+                        <p class="card-text text-center fw-bold text-nowrap elipse m-1 fs-6">
+                            {{ produto.produto }}
+                        </p>
+                        <div class="d-flex">
+                            <div class="d-flex flex-column justify-content-between m-2">
+                                <small class="m-1 font">Valor: R$ {{produto.valor}}</small>
+                            </div>
+                            
+                        </div>
+                        <hr>
+                        <button class="btn w-100 comprar">
+                            <i class="fa fa-cart-plus mr-2" aria-hidden="true"></i>
+                            <span>Comprar</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

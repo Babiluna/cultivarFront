@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import { UserLogin } from '../model/UserLogin';
@@ -47,5 +47,13 @@ export class AuthService {
     return ok
   }
 
-  
+  adm(){
+    let ok: boolean = false
+    if (environment.tipo == 'admin'){
+      ok = true
+    }
+    return ok
+  }
+
+
 }

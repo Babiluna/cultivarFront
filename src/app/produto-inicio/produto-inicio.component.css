@@ -1,0 +1,16 @@
+.card-text{
+    font-weight: bold
+}
+
+.font {
+    font-size: 1rem
+}
+
+
+hr{
+    margin: 0;
+}
+
+.comprar:hover{
+    background-color: rgb(50, 161, 50);
+}

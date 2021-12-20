@@ -18,6 +18,10 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { ProdutoComponent } from './produto/produto.component';
+import { SobrenosComponent } from './sobrenos/sobrenos.component';
+import { ListaprodutosComponent } from './listaprodutos/listaprodutos.component';
+import { ProdutoDetalheComponent } from './produto-detalhe/produto-detalhe.component';
+import { ProdutoInicioComponent } from './produto-inicio/produto-inicio.component';
 
 
 @NgModule({
@@ -34,7 +38,11 @@ import { ProdutoComponent } from './produto/produto.component';
     ProdutoDeleteComponent,
     UserEditComponent,
     CategoriaComponent,
-    ProdutoComponent
+    ProdutoComponent,
+    SobrenosComponent,
+    ListaprodutosComponent,
+    ProdutoDetalheComponent,
+    ProdutoInicioComponent
   ],
   imports: [
     BrowserModule,

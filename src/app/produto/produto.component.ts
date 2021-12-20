@@ -69,7 +69,7 @@ export class ProdutoComponent implements OnInit {
     console.log(this.produto)
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto)=>{
       this.produto = resp
-      alert("Categoria cadastrada com sucesso!")
+      alert("Produto cadastrada com sucesso!")
       this.findAllProduto()
       this.produto = new Produto()
     })
