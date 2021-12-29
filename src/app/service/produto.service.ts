@@ -46,4 +46,5 @@ export class ProdutoService {
   deleteProduto(id: number){
     return this.http.delete(`https://cultivar.herokuapp.com/produtos/${id}`, this.token)
   }
+  
 }
