@@ -11,7 +11,8 @@ export class SobrenosComponent implements OnInit {
 
   constructor(private authService: AuthService, private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    window.scroll(0,0)
   }
 
 }

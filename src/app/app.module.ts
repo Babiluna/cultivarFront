@@ -20,8 +20,8 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { SobrenosComponent } from './sobrenos/sobrenos.component';
 import { ListaprodutosComponent } from './listaprodutos/listaprodutos.component';
-import { ProdutoDetalheComponent } from './produto-detalhe/produto-detalhe.component';
 import { ProdutoInicioComponent } from './produto-inicio/produto-inicio.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 
 @NgModule({
@@ -41,8 +41,8 @@ import { ProdutoInicioComponent } from './produto-inicio/produto-inicio.componen
     ProdutoComponent,
     SobrenosComponent,
     ListaprodutosComponent,
-    ProdutoDetalheComponent,
-    ProdutoInicioComponent
+    ProdutoInicioComponent,
+    CarrinhoComponent
   ],
   imports: [
     BrowserModule,
