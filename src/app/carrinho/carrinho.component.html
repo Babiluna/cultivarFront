@@ -15,7 +15,7 @@
           <div class="col-7">
             <div class="row d-flex flex-column">
               <h5 class="my-3">{{ item.produto }}</h5>
-              <p>Plataforma: {{ item.categoriaDoProduto.categoria }}</p>
+              <p>Categoria: {{ item.categoriaDoProduto.categoria }}</p>
               
             </div>
           </div>
@@ -28,20 +28,23 @@
           </div>
         </div>
       </div>
-      <div class="col-3">
-        <div class="row">
-          <div class="col-12">
-            <div class="row d-flex justify-content-center align-items-center">
-              <h5 class="text-center">
-                Total: {{ total() | currency: "BRL" }}
-              </h5>
-            </div>
-          </div>
-        </div>
+     
         <div class="row">
           <div class="col-12">                                   
             <div class="row">
-              <button class="btn btn-success btn-block">Finalizar compra</button>
+              <button class="btn btn-success btn-block"(click)="finalizar()">Finalizar compra</button>
+              <button class="btn btn-success btn-block"routerLink="/inicio">Continuar comprando</button>
+
+              <div class="col-3">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="row d-flex justify-content-center align-items-center">
+                      <h5 class="text-center">
+                        Total: {{ total() | currency: "BRL" }}
+                      </h5>
+                    </div>
+                  </div>
+                </div>
             </div>
           </div>
         </div>
