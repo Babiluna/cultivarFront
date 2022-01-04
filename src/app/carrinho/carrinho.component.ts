@@ -20,7 +20,8 @@ export class CarrinhoComponent implements OnInit {
     private carrinho: CarrinhoService,
     private prod: ProdutoService,
     private cat: CategoriaService,
-    private auth: AuthService
+    private auth: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit(){ }
@@ -32,6 +33,13 @@ export class CarrinhoComponent implements OnInit {
   parcela(){
     return this.total()/12
   }
+
+  finalizar() {
+    this.carrinho.limpar()
+    this.router.navigate(['/inicio']);
+      alert('Compra finalizada com sucesso!');
+  }
+
 
 }
 
