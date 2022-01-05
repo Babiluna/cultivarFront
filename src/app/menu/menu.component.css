@@ -12,3 +12,15 @@
 .navbar li a:hover {
     color: #606C38;
 }
+
+.i{
+    font-size: 22px;
+    color: #BC6C25;
+}
+.fa:hover {
+    transform: scale(1.2);
+    color: #BC6C25;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-property: all;
+}

@@ -6,7 +6,7 @@
     <div class="row d-flex align-items-center justify-content-between">
       <div class="col-7">
         <div
-          class="row border rounded border-dark p-0 mb-3"
+          class="row border rounded border-dark p-0 mb-4"
           *ngFor="let item of listaCompras"
         >
           <div class="col-2 p-0 m-0">
@@ -31,9 +31,9 @@
      
         <div class="row">
           <div class="col-12">                                   
-            <div class="row">
+            <div class="row d-flex justify-content-center align-items-center">
               <button class="btn btn-success btn-block"(click)="finalizar()">Finalizar compra</button>
-              <button class="btn btn-success btn-block"routerLink="/inicio">Continuar comprando</button>
+              <button class="btn btn-success btn-block"routerLink="/produtoslista">Continuar comprando</button>
 
               <div class="col-3">
                 <div class="row">
