@@ -40,6 +40,8 @@ export class CarrinhoComponent implements OnInit {
       alert('Compra finalizada com sucesso!');
   }
 
-
+  limpar(){
+    this.carrinho.limpar()
+  }
 }
 
