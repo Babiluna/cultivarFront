@@ -22,6 +22,7 @@ import { SobrenosComponent } from './sobrenos/sobrenos.component';
 import { ListaprodutosComponent } from './listaprodutos/listaprodutos.component';
 import { ProdutoInicioComponent } from './produto-inicio/produto-inicio.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { ProdutoslistaComponent } from './produtoslista/produtoslista.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
     SobrenosComponent,
     ListaprodutosComponent,
     ProdutoInicioComponent,
-    CarrinhoComponent
+    CarrinhoComponent,
+    ProdutoslistaComponent
   ],
   imports: [
     BrowserModule,

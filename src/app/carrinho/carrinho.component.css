@@ -1,0 +1,11 @@
+button {
+    color: #FEFAE0;
+    font-weight: 800;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 3px;
+    background-color: #283618;
+    padding: 10px 50px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 80px;
+}
