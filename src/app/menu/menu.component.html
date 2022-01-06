@@ -1,22 +1,17 @@
-<nav class="navbar navbar-expand navbar-light bg-white fixed-top d-flex justify-content-between">
-  <div>
+<nav class="navbar navbar-expand navbar-light bg-white fixed-top d-flex justify-content-between pl-5 pr-5">
+  <div class="username">
     <a class="navbar-brand" href="#">
       <img src="https://i.imgur.com/Xl5bbhK.png" alt="logo" width="120px">
     </a>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-content-center" *ngIf='auth.adm()'>
+      <li class="nav-item pl-3">
+        <p class="m-0 font-weight-bold text-dark  fs-16">Olá, {{nome}}!</p>
+      </li>
+    </ul>
   </div>
 
   <div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-      aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-      <span class="navbar-toggler-icon"></span>
-    </button>
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-content-center" *ngIf='auth.adm()'>
-       <li class="nav-item pl-3">
-          <p class="m-0 font-weight-bold text-dark  fs-16">Olá, {{nome}}!</p>
-        </li>
-        
-      </ul>
 
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -28,7 +23,7 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/produtoslista">Produtos</a>
         </li>
-        
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false" *ngIf='auth.adm()'>
@@ -43,14 +38,14 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/entrar" *ngIf='!auth.logado()'>Login</a>
         </li>
-       
+
         <li class="nav-item">
           <a class="nav-link" routerLink="/cadastrar" *ngIf='!auth.logado()'>Cadastre-se</a>
-          
+
           <a class="nav-link" *ngIf='auth.logado()' (click)="sair()">Sair</a>
         </li>
         <li class="nav-item">
-          <i class="nav-link"i class="fa fa-shopping-cart i" aria-hidden="true"routerLink="/carrinho"></i>
+          <i class="nav-link" i class="fa fa-shopping-cart i" aria-hidden="true" routerLink="/carrinho"></i>
         </li>
       </ul>
     </div>

@@ -33,7 +33,7 @@ export class ProdutoEditComponent implements OnInit {
   ) { }
 
   ngOnInit(){
-
+    window.scroll(0,0)
     this.authService.refreshToken()
     this.findAllCategorias()
     let id = this.route.snapshot.params["id"]

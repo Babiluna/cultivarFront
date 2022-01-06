@@ -13,9 +13,20 @@
     color: #606C38;
 }
 
+.username{
+    display: flex;
+    align-items: center;
+    font-size: large;
+    font-weight: 800;
+    color: #283618;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 3px;
+}
+
 .i{
     font-size: 22px;
     color: #BC6C25;
+    cursor: pointer;
 }
 .fa:hover {
     transform: scale(1.2);

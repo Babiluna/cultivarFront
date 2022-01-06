@@ -66,7 +66,7 @@ hr {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px 300px;
+    padding: 50px 270px;
     width: 100%;
 }
 .who-title {
@@ -75,7 +75,7 @@ hr {
 
 .who-title h1 {
     font-family: 'Raleway', sans-serif;
-    font-size: 70px;
+    font-size: 74px;
     letter-spacing: 2px;
     font-weight: bolder;
     color: #283618;
@@ -87,7 +87,7 @@ hr {
 
 .who-text {
     font-family: 'Raleway', sans-serif;
-    font-size: 20px;
+    font-size: 23px;
     color: #283618;
     letter-spacing: 1px;
 }
@@ -126,6 +126,13 @@ hr {
     width: 180px;
     border-radius: 100%;
     background-color: #BC6C25;
+}
+
+.us-img a img:hover {
+    transform: scale(1.07);
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-property: all;
 }
 
 .us-img p {
