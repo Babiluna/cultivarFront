@@ -22,6 +22,8 @@ export class CategoriaEditComponent implements OnInit {
 
   ngOnInit() {
 
+    window.scroll(0,0)
+
     this.authService.refreshToken()
 
     let id = this.route.snapshot.params["id"]

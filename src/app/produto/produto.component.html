@@ -68,7 +68,9 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Produto</th>
-                    <th scope="col">Categoria do Produto</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Estoque</th>
                 </tr>
             </thead>
             <tbody>
@@ -76,6 +78,8 @@
                     <th>{{item.id}}</th>
                     <td>{{item.produto}}</td>
                     <td>{{item.categoriaDoProduto.categoria}}</td>
+                    <td>{{item.valor}}</td>
+                    <td>{{item.estoque}}</td>
                     <td class="d-flex justify-content-end">
                         <button class="btn btn-info mr-3" [routerLink]="['/produto-edit', item.id]">Editar</button>
                         <button class="btn btn-danger" [routerLink]="['/produto-delete', item.id]">Apagar</button>
