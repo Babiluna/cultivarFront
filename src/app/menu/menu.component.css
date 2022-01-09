@@ -24,12 +24,12 @@
 }
 
 .i{
-    font-size: 22px;
+    font-size: 26px;
     color: #BC6C25;
     cursor: pointer;
 }
 .fa:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     color: #BC6C25;
     transition-duration: 0.3s;
     transition-timing-function: ease-in;

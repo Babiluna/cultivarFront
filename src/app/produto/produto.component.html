@@ -81,8 +81,8 @@
                     <td>{{item.valor}}</td>
                     <td>{{item.estoque}}</td>
                     <td class="d-flex justify-content-end">
-                        <button class="btn btn-info mr-3" [routerLink]="['/produto-edit', item.id]">Editar</button>
-                        <button class="btn btn-danger" [routerLink]="['/produto-delete', item.id]">Apagar</button>
+                        <button class="btn btn-info mr-3 edit" [routerLink]="['/produto-edit', item.id]">Editar</button>
+                        <button class="btn btn-danger delete" [routerLink]="['/produto-delete', item.id]">Apagar</button>
                     </td>
                 </tr>
             </tbody>

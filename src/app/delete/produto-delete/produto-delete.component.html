@@ -1,23 +1,22 @@
 <div class="container">
 
-  <div class="title">
-      <h1>Apagar Produto</h1>
-  </div>
+    <div class="title">
+        <h1>Apagar Produto</h1>
+    </div>
 
-  <div class="subtitle">
-      <h4>Você tem certeza que deseja apagar essa produto?</h4>
-  </div>
-  
+    <div class="subtitle">
+        <h4>Você tem certeza que deseja apagar essa produto?</h4>
+    </div>
+
     <div class="produto">
         <h5>Produto: {{produto.produto}}</h5>
     </div>
-  
-    <div class="buttons">
-        <button routerLink="/produto">Não</button>
-        <button (click)="apagar()">Sim</button>
-    </div>
-  
-  </div>
 
-  <app-rodape></app-rodape>
-  
+    <div class="buttons">
+        <button class="cancel" routerLink="/produto">Cancelar</button>
+        <button class="deletar" (click)="apagar()">Deletar</button>
+    </div>
+
+</div>
+
+<app-rodape></app-rodape>

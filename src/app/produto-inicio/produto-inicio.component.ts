@@ -14,7 +14,7 @@ import { ProdutoService } from '../service/produto.service';
 })
 
 export class ProdutoInicioComponent implements OnInit {
-  
+
   produto: Produto = new Produto();
 
   idProduto: number;
@@ -25,9 +25,9 @@ export class ProdutoInicioComponent implements OnInit {
     public auth: AuthService,
     private prod: ProdutoService,
     private catg: CategoriaService,
-    private router: Router,
-    private carrinhoService: CarrinhoService
-  ) {}
+    private carrinhoService: CarrinhoService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     window.scroll(0, 0);
@@ -39,7 +39,6 @@ export class ProdutoInicioComponent implements OnInit {
   getAllCategorias() {
     this.catg.getAllCategoria().subscribe((resp: Categoria[]) => {
       this.listaCategorias = resp;
-      
     });
   }
 
@@ -48,24 +47,31 @@ export class ProdutoInicioComponent implements OnInit {
       this.listaProdutos = resp;
       this.listaProdutos.sort((a, b) => a.valor - b.valor)
     });
+
   }
 
-  getProdutoById(id:number){
-    this.prod.getByIdProduto(id).subscribe((resp: Produto) => {
-      this.produto = resp;
-      this.adicionarProduto()
-    }) 
+  getProdutoById(id: number) {
+    if (this.auth.logado() == true) {
+      this.prod.getByIdProduto(id).subscribe((resp: Produto) => {
+        this.produto = resp;
+        this.adicionarProduto()
+      })
+    } else {
+      alert("Cadastre-se para realizar a compra.")
+      this.router.navigate(['/cadastrar'])
+    }
+
   }
 
 
-  adicionarProduto(){
+  adicionarProduto() {
     this.carrinhoService.adicionar(this.produto)
     console.log(this.carrinhoService.produtos)
   }
 }
 
-  
-  
 
-  
+
+
+
 

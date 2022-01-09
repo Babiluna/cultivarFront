@@ -1,12 +1,20 @@
-.margem{
-  margin-top: 80px;
+.produtos {
+  margin-top: 70px;
+  min-height: 500px;
 }
 
-h2 {
+h3 {
   font-family: 'Raleway', sans-serif;
   font-size: 35px;
   letter-spacing: 2px;
   font-weight: bolder;
   color: #283618;
   text-align: center;
+  padding: 30px 0;
+}
+
+hr {
+  color: #283618;
+  margin-top: 10px;
+  width: 75%;
 }

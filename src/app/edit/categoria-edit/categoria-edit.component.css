@@ -1,3 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.edit-page {
+    padding: 100px 0;
+    width: 100vw;
+}
+
 .title {
     display: flex;
     justify-content: space-evenly;
@@ -27,7 +37,6 @@ label {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin: 500;
 }
 
 .form-group input{
@@ -48,26 +57,44 @@ label {
 
 .buttons {
     display: flex;
-    justify-content: space-between;
-    margin: 25px 600px 250px 600px;
+    justify-content: center;
+    gap: 15px;
+    width: 100vw;
+    margin: 25px 0;
 }
 
-.buttons button {
-    color: #FEFAE0;
+.buttons button{
     font-weight: 800;
     font-family: 'Raleway', sans-serif;
     letter-spacing: 3px;
-    background-color: #283618;
-    padding: 5px 10px;
-    margin-top: 12px;
+    padding: 5px 20px;
     border: none;
     border-radius: 80px;
+    box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.29);
 }
 
 .buttons button:hover {
-    background: #606C38;
-    transform: scale(0.95);
+    transform: scale(1.05);
     transition-duration: 0.3s;
     transition-timing-function: ease-in;
     transition-property: all;
+}
+
+.cancel {
+    color: #FEFAE0;  
+    background-color: #283618;
+}
+
+.cancel:hover {
+    background-color: #606C38;
+}
+
+.att {
+    background: none;
+    color: #283618;
+    margin-left: 50px;
+}
+
+.att:hover {
+    background: #FEFAE0;
 }

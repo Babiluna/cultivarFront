@@ -31,10 +31,10 @@ export class EntrarComponent implements OnInit {
       environment.tipo = this.userLogin.tipo
 
 
-       this.router.navigate(['/inicio'])
+      this.router.navigate(['/inicio'])
     }, erro => {
       if(erro.status == 500){
-        alert('Usuário ou senha estão incorretos.')
+        alert('Usuário ou senha incorretos.')
       }
     })
   }

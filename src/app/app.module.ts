@@ -19,7 +19,6 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { SobrenosComponent } from './sobrenos/sobrenos.component';
-import { ListaprodutosComponent } from './listaprodutos/listaprodutos.component';
 import { ProdutoInicioComponent } from './produto-inicio/produto-inicio.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ProdutoslistaComponent } from './produtoslista/produtoslista.component';
@@ -41,7 +40,6 @@ import { ProdutoslistaComponent } from './produtoslista/produtoslista.component'
     CategoriaComponent,
     ProdutoComponent,
     SobrenosComponent,
-    ListaprodutosComponent,
     ProdutoInicioComponent,
     CarrinhoComponent,
     ProdutoslistaComponent
