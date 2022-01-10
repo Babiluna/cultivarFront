@@ -57,8 +57,8 @@ export class ProdutoInicioComponent implements OnInit {
         this.adicionarProduto()
       })
     } else {
-      alert("Cadastre-se para realizar a compra.")
-      this.router.navigate(['/cadastrar'])
+      alert("Entre na sua conta para realizar a compra.")
+      this.router.navigate(['/entrar'])
     }
 
   }
