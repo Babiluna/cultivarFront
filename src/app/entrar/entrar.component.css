@@ -39,12 +39,13 @@ button {
     margin-top: 20px;
     border: none;
     border-radius: 80px;
+    box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.29);
 }
 
 button:hover {
     background: #606C38;
-    transform: scale(0.90);
-    transition-duration: 0.5s;
+    transform: scale(1.05);
+    transition-duration: 0.3s;
     transition-timing-function: ease-in;
     transition-property: all;
 }

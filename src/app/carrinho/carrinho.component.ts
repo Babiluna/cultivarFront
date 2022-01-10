@@ -19,12 +19,12 @@ export class CarrinhoComponent implements OnInit {
   constructor(
     private carrinho: CarrinhoService,
     private prod: ProdutoService,
-    private cat: CategoriaService,
-    private auth: AuthService,
     private router: Router
   ) { }
 
-  ngOnInit(){ }
+  ngOnInit(){
+    window.scroll(0,0)
+  }
 
   total() {
     return this.comprados.map((item) => item.valor).reduce((a, b) => a + b, 0);

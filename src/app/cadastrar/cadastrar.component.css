@@ -16,6 +16,24 @@ h1 {
   letter-spacing: 3px;
 }
 
+p {
+  font-size: 12px;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 2px;
+  color: #283618;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #606C38;
+}
+
+a:hover {
+  color: #BC6C25;
+  text-decoration: underline #BC6C25;
+}
+
 .form {
   display: flex;
   justify-content: space-evenly;
@@ -50,17 +68,29 @@ button {
   font-weight: 800;
   font-family: 'Raleway', sans-serif;
   letter-spacing: 3px;
-  background-color: #283618;
   padding: 10px 50px;
   margin-top: 20px;
   border: none;
   border-radius: 80px;
+  box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.29);
 }
 
 button:hover {
-  background: #606C38;
-  transform: scale(0.90);
+  transform: scale(1.05);
   transition-duration: 0.3s;
   transition-timing-function: ease-in;
   transition-property: all;
+}
+
+.cancelar {
+  background-color: white;
+  color: #283618;
+}
+
+.cadastrar {
+  background-color: #283618;
+}
+
+.cadastrar:hover {
+  background-color: #283618;
 }

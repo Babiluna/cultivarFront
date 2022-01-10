@@ -8,7 +8,7 @@
       <div class="row d-flex justify-content-center mt-5">
         <div class="col-md-10">
           <h1 class="text-center mt-5">Cadastro</h1>
-
+          <p>Já tem uma conta? <a routerLink='/entrar'>Clique aqui para entrar!</a></p>
           <hr>
 
           <div class="form">
@@ -58,8 +58,8 @@
           </div>
 
           <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-danger mr-4" routerLink="/entrar">Cancelar</button>
-            <button type="submit" class="btn btn-success" (click)="cadastrar()">Cadastrar</button>
+            <button type="submit" class="btn btn-danger mr-4 cancelar" routerLink="/entrar">Cancelar</button>
+            <button type="submit" class="btn btn-success cadastrar" (click)="cadastrar()">Cadastrar</button>
           </div>
         </div>
       </div>

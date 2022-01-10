@@ -11,7 +11,6 @@ import { UserEditComponent } from './edit/user-edit/user-edit.component';
 
 import { EntrarComponent } from './entrar/entrar.component';
 import { InicioComponent } from './inicio/inicio.component';
-import { ListaprodutosComponent } from './listaprodutos/listaprodutos.component';
 import { ProdutoInicioComponent } from './produto-inicio/produto-inicio.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { ProdutoslistaComponent } from './produtoslista/produtoslista.component';
@@ -36,8 +35,6 @@ const routes: Routes = [
   {path: "produto-delete/:id", component: ProdutoDeleteComponent},
   {path: "user-edit/:id", component: UserEditComponent},
   {path: "ProdutoInicio/:id", component: ProdutoInicioComponent},
-  {path: "ListaProdutos/:id", component: ListaprodutosComponent},
-  
 
 ];
 

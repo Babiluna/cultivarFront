@@ -3,7 +3,7 @@
 }
 
 .title {
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 .title h1 {
@@ -35,23 +35,41 @@
 .buttons {
     display: flex;
     justify-content: center;
+    gap: 5px;
 }
 
 .buttons button{
-    color: #FEFAE0;
     font-weight: 800;
     font-family: 'Raleway', sans-serif;
     letter-spacing: 3px;
-    background-color: #283618;
     padding: 5px 20px;
     border: none;
     border-radius: 80px;
+    box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.29);
 }
 
 .buttons button:hover {
-    background: #606C38;
-    transform: scale(0.95);
+    transform: scale(1.05);
     transition-duration: 0.3s;
     transition-timing-function: ease-in;
     transition-property: all;
+}
+
+.cancel {
+    color: #FEFAE0;  
+    background-color: #283618;
+}
+
+.cancel:hover {
+    background-color: #606C38;
+}
+
+.deletar {
+    background: none;
+    color: #283618;
+    margin-left: 50px;
+}
+
+.deletar:hover {
+    background: #FEFAE0;
 }
