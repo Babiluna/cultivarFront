@@ -33,8 +33,8 @@ export class EntrarComponent implements OnInit {
 
       this.router.navigate(['/inicio'])
     }, erro => {
-      if(erro.status == 500){
-        alert('Usuário ou senha incorretos.')
+      if(erro.status == 400 || erro.status == 401){
+        alert('E-mail ou senha incorreta, corrija e tente novamente!')
       }
     })
   }
