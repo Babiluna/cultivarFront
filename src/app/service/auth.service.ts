@@ -33,7 +33,12 @@ export class AuthService {
     return this.http.post<Usuario>('https://cultivar.herokuapp.com/usuarios/cadastrar', usuario)
   }
 
-  getByIdUser(id: number):Observable<Usuario>{
+
+  putUsuario(usuario: Usuario): Observable<Usuario>{
+    return this.http.put<Usuario>('https://cultivar.herokuapp.com/usuarios/atualizar', usuario, this.token)
+  }
+
+  getByIdUsuario(id: number):Observable<Usuario>{
     return this.http.get<Usuario>(`https://cultivar.herokuapp.com/usuarios/${id}`,this.token)
   }
 
@@ -62,4 +67,5 @@ export class AuthService {
     }
     return ok
   }
+
 }

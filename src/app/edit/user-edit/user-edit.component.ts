@@ -33,8 +33,8 @@ export class UserEditComponent implements OnInit {
 
   }
 
-  confirmaSenha(event: any) {
-    this.confirmaSenha = event.target.value
+  confirmSenha(event: any) {
+    this.confirmarSenha = event.target.value
   }
 
   tipoUsuarios(event: any) {
@@ -45,24 +45,26 @@ export class UserEditComponent implements OnInit {
     this.usuario.tipo = this.tipoUsuario
 
     if (this.usuario.senha != this.confirmarSenha) {
-      alert('A senha estão incorretas.')
+      alert('As senhas não correspondem.')
     } else {
-      this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
+      this.authService.putUsuario(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
-        this.router.navigate(['/entrar'])
-        alert('Usuario cadastrado com sucesso!, faça login novamente')
+        
+        alert('Usuário atualizado com sucesso, faça o login novamente.')
         environment.token = ''
         environment.nome = ''
         environment.foto = ''
         environment.id = 0
+        environment.tipo= ''
         this.router.navigate(['/entrar'])
       })
     }
   }
 
   findByIdUser(id: number) {
-    this.authService.getByIdUser(id).subscribe((resp: Usuario) => {
+    this.authService.getByIdUsuario(id).subscribe((resp: Usuario) => {
       this.usuario = resp
     })
   }
+
 }
