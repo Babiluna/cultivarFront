@@ -9,21 +9,38 @@
     background-color: #FEFAE0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px 200px;
+    flex-direction: column;
+    padding: 15px 100px 25px 100px;
     margin: 25px 0;
     width: 100%;
 }
 
-.aboutus-text {
-    width: 70%;
+.aboutus-title {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.aboutus-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.aboutus-elements h3 {
+    font-weight: bold;
+    font-size: 60px;
+    color: #283618;
 }
 
 .aboutus-img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25px;
+    padding-top: 15px;
+    width: 400px;
+    height: 230px;
 }
 
 .aboutus-img:hover {
@@ -32,24 +49,16 @@
     transition: 0.5s;
 }
 
-.aboutus h1 {
-    font-family: 'Raleway', sans-serif;
-    color: #283618;
-    margin: 5px 0;
-    letter-spacing: 3px;
-    font-weight: 800;
-    font-size: 35px;
-}
-
 .aboutus p {
     font-family: 'Raleway', sans-serif;
-    font-size: 14px;
+    font-size: 20px;
     color: #283618;
     letter-spacing: 3px;
 }
 
 .aboutus img {
-    width: 240px;
+    width: 250px;
+    margin-top: 25px;
 }
 
 .aboutus button {
@@ -59,8 +68,8 @@
     font-family: 'Raleway', sans-serif;
     letter-spacing: 1px;
     background-color: #283618;
-    width: 250px;
-    padding: 5px;
+    padding: 4px 50px;
+    margin-bottom: 10px;
     border: none;
     border-radius: 80px;
     box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.29);
@@ -82,7 +91,7 @@
 
 .produtos h2 {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 15px;
     color: #283618;
     font-weight: 800;
     font-size: 30px;
@@ -92,5 +101,5 @@
 
 .produtos hr {
     color: #283618;
-    width: 75%;
+    width: 85%;
 }
