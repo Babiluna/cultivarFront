@@ -8,7 +8,7 @@ A nossa aplicação está atrelada com a ODS 10 - Redução das desigualdades e 
 </div>
 
 <h2>Qual o nosso propósito?</h2>
-CultiVar surgiu com o propósito de facilitar e proporcionr um espaço digital a essas pessoas.
+CultiVar surgiu com o propósito de facilitar e proporcionar um espaço digital a essas pessoas.
 
 <h2>E quem são essas pessoas?</h2>
 Queremos alcançar pessoas em condição de vulnerabilidade social que receberam capacitação para atuar como agricultores e comerciantes em hortas comunitárias já existentes na região metropolitana do Recife.
@@ -26,7 +26,7 @@ Esse projeto foi desenvolvido utilizando:
 </ul>
 
 <h2>Back-end</h2>
-o nosso back-end foi feito em Java, utilizando o Framework Spring Boot. O banco de dados foi o MySQL e também utilizamos o PostgreSQL para o deploy realizado no Heroku.
+O nosso back-end foi feito em Java, utilizando o Framework Spring Boot. O banco de dados foi o MySQL e também utilizamos o PostgreSQL para o deploy realizado no Heroku.
 <br>
 <br>
  <img src="https://i.imgur.com/Wycpwqf.jpg" alt="page">
